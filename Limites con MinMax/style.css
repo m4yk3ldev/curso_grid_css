@@ -1,0 +1,14 @@
+main {
+    height: 100vh;
+    display: grid;
+    grid-gap: 10px;
+    grid-template-columns:
+            repeat(4, 30px minmax(10%, 1fr));
+}
+
+div {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: goldenrod;
+}
