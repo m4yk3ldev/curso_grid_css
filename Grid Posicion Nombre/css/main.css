@@ -1,33 +1,34 @@
-main{
+main {
     display: grid;
     height: 100vh;
     grid-gap: 10px;
     /* Especificar posicion de las areas */
     grid-template-areas:
-    "header header header"
+    "header header derecha"
     "izquierda contenido derecha"
-    "footer footer footer"
-;
+    "footer footer derecha";
+    grid-template-columns: 1fr 2fr 1fr;
+    grid-template-rows: 2fr 5fr 1fr;
 }
 
 main > * {
     background-color: goldenrod;
     display: flex;
     justify-content: center;
-    align-items:center;
+    align-items: center;
 }
 
 @media ( max-width: 500px) {
-    main{
+    main {
         grid-template-areas:
     "header "
     "izquierda "
     "contenido "
     "derecha "
-    "footer "
-    ;
+    "footer ";
     }
 }
+
 /* Nombrar las areas */
 
 header {
@@ -42,7 +43,7 @@ article {
     grid-area: contenido;
 }
 
-aside:last-of-type{
+aside:last-of-type {
     grid-area: derecha;
 }
 
